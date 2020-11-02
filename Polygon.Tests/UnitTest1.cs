@@ -13,7 +13,7 @@ namespace Polygon.Tests
 		[SetUp]
 		public void Setup()
 		{
-			PolygonClient.Configure("U9lQRXCEfLp21pT2lhnLnhbYM0GSpcS3");
+			PolygonClient.Configure("test");
 			this._client = new PolygonClient(new System.Net.Http.HttpClient());
 		}
 
