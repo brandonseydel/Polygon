@@ -25,7 +25,7 @@ namespace Polygon
 		private Crypto _crypto;
 		private Forex _forex;
 		private Reference _references;
-		private Stock _stocks;
+		private IStock _stocks;
 
 		public PolygonClient(
 			HttpClient httpClient,
