@@ -33,11 +33,11 @@ jobs:
         # You may pin to the exact commit or the version.
         # uses: SiqiLu/dotnet-bump-version@e1c7b163e28a598cf7323ab9ccd8915a45c31040
         uses: SiqiLu/dotnet-bump-version@1.0.2
-        with:
+        # with:
           # Version files to bump version. You can use Glob pattern string (like "**/*.csproj") or Glob patterns array json string (like "["**/*.csproj", ".version", "**/*.version.json"]"). Patterns supported by Globby are supported.Leading ! changes the meaning of an include pattern to exclude.
-          version_files: # optional, default is **/*.csproj
+          # version_files: # optional, default is **/*.csproj
           # the github token to push changes
-          github_token: # optional
+          # github_token: # optional
       - name: Publish NuGet
         # You may pin to the exact commit or the version.
         # uses: brandedoutcast/publish-nuget@c12b8546b67672ee38ac87bea491ac94a587f7cc
@@ -46,20 +46,20 @@ jobs:
           # Filepath of the project to be packaged, relative to root of repository
           PROJECT_FILE_PATH: Polygon/Polygon.csproj
           # NuGet package id, used for version detection & defaults to project name
-          PACKAGE_NAME: # optional
+          # PACKAGE_NAME: # optional
           # Filepath with version info, relative to root of repository & defaults to PROJECT_FILE_PATH
-          VERSION_FILE_PATH: # optional
+          # VERSION_FILE_PATH: # optional
           # Regex pattern to extract version info in a capturing group
-          VERSION_REGEX: # optional, default is ^\s*<Version>(.*)<\/Version>\s*$
+          # VERSION_REGEX: # optional, default is ^\s*<Version>(.*)<\/Version>\s*$
           # Useful with external providers like Nerdbank.GitVersioning, ignores VERSION_FILE_PATH & VERSION_REGEX
-          VERSION_STATIC: # optional
+          # VERSION_STATIC: # optional
           # Flag to toggle git tagging, enabled by default
-          TAG_COMMIT: # optional, default is true
+          # TAG_COMMIT: # optional, default is true
           # Format of the git tag, [*] gets replaced with actual version
-          TAG_FORMAT: # optional, default is v*
+          # TAG_FORMAT: # optional, default is v*
           # API key to authenticate with NuGet server
           NUGET_KEY: ${{secrets.nuget}}
           # NuGet server uri hosting the packages, defaults to https://api.nuget.org
-          NUGET_SOURCE: # optional, default is https://api.nuget.org
+          # NUGET_SOURCE: # optional, default is https://api.nuget.org
           # Flag to toggle pushing symbols along with nuget package to the server, disabled by default
-          INCLUDE_SYMBOLS: # optional
+          # INCLUDE_SYMBOLS: # optional
