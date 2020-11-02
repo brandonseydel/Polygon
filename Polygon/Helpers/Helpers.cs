@@ -24,6 +24,6 @@ namespace Polygon.Helpers
 			return "?" + string.Join("&", properties.Select(x => $"{x.Name.Replace(x.Name[0], char.ToLower(x.Name[0]))}={(x.PropertyType == typeof(bool) || x.PropertyType == typeof(bool?) ? x.GetValue(obj)?.ToString().ToLower() : x.GetValue(obj))}"));
 		}
 
-		public static DateTime? GetUTCTimeFromUnixTimestamp(this long? unixTimetsamp) => unixTimetsamp.HasValue ? System.DateTime.UnixEpoch.AddMilliseconds(unixTimetsamp.Value) : null;
+		public static DateTime? GetUTCTimeFromUnixTimestamp(this long? unixTimetsamp) => unixTimetsamp.HasValue ? System.DateTime.UnixEpoch.AddMilliseconds(unixTimetsamp.Value) : null as DateTime?;
 	}
 }
