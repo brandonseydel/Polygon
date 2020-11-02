@@ -112,7 +112,7 @@ namespace Polygon
 			}
 		}
 
-		public Stock Stocks
+		public IStock Stocks
 		{
 			get
 			{
